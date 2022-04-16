@@ -1,4 +1,4 @@
-﻿public class MenuItems
+﻿public class MenuItem
 {
     public string Name { get; set; }
     public string Description { get; set; }
@@ -6,12 +6,14 @@
     public string Ingredients { get; set; }
     public double Price { get; set; }
 
-    public MenuItems(string name, string description, string ingredients, double price)
+    public MenuItem(){}
+
+    public MenuItem(string name, string description, string ingredients, double price)
     {
-        name = Name;
-        description = Description;
-        ingredients = Ingredients;
-        price = Price;
+        Name = name;
+        Description = description;
+        Ingredients = ingredients;
+        Price = price;
 
     }
 

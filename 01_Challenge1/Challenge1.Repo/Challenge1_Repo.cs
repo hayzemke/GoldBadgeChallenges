@@ -1,9 +1,9 @@
 ﻿public class Challenge1_Repo
 {
-    private readonly List<MenuItems> _menuDatabase = new List<MenuItems>();
+    private readonly List<MenuItem> _menuDatabase = new List<MenuItem>();
     private int _count = 0;
     //* Create
-    public bool AddMenuItem(MenuItems menuItems)
+    public bool AddMenuItem(MenuItem menuItems)
     {
         if (menuItems != null)
         {
@@ -18,13 +18,13 @@
         }
     }
     //* Read
-    public List<MenuItems> SeeAllMenuItems()
+    public List<MenuItem> SeeAllMenuItems()
     {
         return _menuDatabase;
     }
-    public MenuItems GetMenuItemByID(int ID)
+    public MenuItem GetMenuItemByID(int ID)
     {
-        foreach (MenuItems menuItems in _menuDatabase)
+        foreach (MenuItem menuItems in _menuDatabase)
         {
             if (menuItems.ItemID==ID)
             {
