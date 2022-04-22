@@ -7,13 +7,11 @@ using Challenge2.Data;
 public class Program_UI
 {
     private readonly Challenge2_Repo _Repo = new Challenge2_Repo();
-
     public void Run()
     {
         SeedData();
         RunApplication();
     }
-
     private void RunApplication()
     {
         bool isRunning = true;
@@ -55,7 +53,6 @@ public class Program_UI
         }
         PressAnyKeyToContinue();
     }
-
     private bool CloseApplication()
     {
         Console.Clear();
@@ -63,7 +60,6 @@ public class Program_UI
         PressAnyKeyToContinue();
         return false;
     }
-
     private void NextClaim()
     {
         Console.Clear();
@@ -72,24 +68,24 @@ public class Program_UI
         {
             System.Console.WriteLine("Sorry, All Claims are Handled!");
         }
-       else
-       {
+        else
+        {
             DisplayClaim(claimItem);
 
-        System.Console.WriteLine("Do You Want To Handle This Claim Right Now? Y/N");
-        var userInput = Console.ReadLine();
-        if (userInput == "Y".ToLower()|| userInput == "Y")
-        {
-            if (_Repo.HandleClaim())
+            System.Console.WriteLine("Do You Want To Handle This Claim Right Now? Y/N");
+            var userInput = Console.ReadLine();
+            if (userInput == "Y" || userInput == "y")
             {
-                System.Console.WriteLine("Claim was Handled!");
-            }
-            else
-            {
-                System.Console.WriteLine("Claim was not handled.");
+                if (_Repo.HandleClaim())
+                {
+                    System.Console.WriteLine("Claim was Handled!");
+                }
+                else
+                {
+                    System.Console.WriteLine("Claim was not handled.");
+                }
             }
         }
-       }
         PressAnyKeyToContinue();
     }
     private void SeeAllClaims()
@@ -134,7 +130,7 @@ public class Program_UI
 
         System.Console.WriteLine("Is The Claim Valid?");
         string userInput = Console.ReadLine();
-        if (userInput == "Y".ToLower())
+        if (userInput == "Y" || userInput == "y")
         {
             newClaim.IsValid = true;
         }

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>_03_Challenge3_Tests</RootNamespace>
-    <Nullable>enable</Nullable>
+    <!-- <Nullable>enable</Nullable> -->
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -19,6 +19,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\03_Challenge3\Challenge3.Repo\Challenge3.Repo.csproj" />
+    <ProjectReference Include="..\03_Challenge3\Challenge3.Data\Challenge3.Data.csproj" />
   </ItemGroup>
 
 </Project>

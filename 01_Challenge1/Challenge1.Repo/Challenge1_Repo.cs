@@ -17,6 +17,20 @@
             return false;
         }
     }
+    public bool AddMultipleItems(List<MenuItem> items)
+    {
+        if (items != null)
+        {
+            foreach (var item in items)
+            {
+                _count++;
+                item.ItemID = _count;
+            }
+            _menuDatabase.AddRange(items);
+            return true;
+        }
+        return false;
+    }
     //* Read
     public List<MenuItem> SeeAllMenuItems()
     {
